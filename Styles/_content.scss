@@ -1,0 +1,121 @@
+@import 'media-queries';
+
+@mixin aligncenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app {
+
+    padding: 2rem;
+    @include aligncenter();
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .weather {
+        background-color: rgb(172, 147, 227);
+        max-width: 450px;
+        padding: 2rem;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+
+        &__title {
+
+            @include aligncenter();
+            justify-content: start;
+            gap: 1rem;
+
+            picture {
+                background-color: white;
+                width: 40px;
+                height: 40px;
+                @include aligncenter();
+                border-radius: 50px;
+
+
+                img {
+                    width: 20px;
+                }
+            }
+        }
+
+        &__temprature {
+
+            h4 {
+                line-height: .5rem;
+            }
+
+            .temprature__flex {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+
+                h1 {
+                    font-size: 3rem;
+                    font-weight: 500;
+
+                }
+
+                .celsius {
+                    background-color: white;
+                    padding: 0 .5rem;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .weather__info {
+        @include aligncenter();
+        gap: 1rem;
+        justify-content: start;
+        flex-wrap: wrap;
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+
+        .info {
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            flex-grow: 1;
+            @include aligncenter();
+            flex-direction: column;
+        }
+
+        .info.pressure {
+            background-color: rgb(31, 30, 30);
+            color: white;
+        }
+
+        .info.visibilty {
+            background-color: rgb(151, 206, 95);
+        }
+
+        .info.humidity {
+            background-color: white;
+        }
+
+
+    }
+
+}
+
+
+@include mobile {
+    .app {
+        padding: 2rem;
+        gap: 1rem;
+    }
+}

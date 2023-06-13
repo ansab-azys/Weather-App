@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+
+<body>
+
+    <div class="input__container visible">
+
+        <h2>weather</h2>
+
+
+        <form action="" class="form">
+            <div class="input__group">
+                <label for="name">Full name</label>
+                <input type="text" name="name" id="name">
+            </div>
+
+            <div class="input__group">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city">
+            </div>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="profile">
+                <div class="profile__title">
+                    <span>Hello,</span>
+                    <h3 id="title-name">Jack Grealish</h3>
+                </div>
+            </div>
+
+            <div class="search">
+                <div class="search__group">
+                    <input type="text" placeholder="Search location" id="search">
+                    <picture>
+                        <img id="search-btn" src="Assets/Images/icons8-search (1).svg" alt="">
+                    </picture>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="app">
+
+            <h1 id="title-city">city</h1>
+
+            <div class="weather">
+                <div class="weather__title">
+                    <picture>
+                        <img src="Assets/Images/icons8-cloud-24.png" alt="">
+                    </picture>
+
+                    <div class="weather__text">
+                        <h4>Weather</h4>
+                        <p>What's the weather.</p>
+                    </div>
+                </div>
+
+                <div class="weather__temprature">
+                    <div class="temprature__flex">
+                        <h1 id="temp">22 °C</h1>
+                        <div class="celsius">
+                            <p>11 °C</p>
+                        </div>
+                    </div>
+
+                    <h4 id="condition">Portly Cloudy</h4>
+                </div>
+
+                <div class="weather__info">
+                    <div class="info pressure">
+                        <p>Pressure</p>
+                        <h3 id="pressure">800mb</h3>
+                    </div>
+                    <div class="info visibilty">
+                        <p>Visibilty</p>
+                        <h3 id="visibilty">4.5 km</h3>
+                    </div>
+                    <div class="info humidity">
+                        <p>Humidity</p>
+                        <h3 id="humidity">80%</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

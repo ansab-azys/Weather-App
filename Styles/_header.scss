@@ -1,0 +1,85 @@
+@use 'colors';
+@import 'media-queries';
+
+
+@mixin aligncenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    @include aligncenter();
+    justify-content: space-between;
+    padding: 2rem
+}
+
+.profile {
+    @include aligncenter();
+    gap: 1rem;
+
+    picture {
+        width: 45px;
+        background-color: cadetblue;
+        border-radius: 50px;
+        border: none;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3rem;
+
+        span {
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+.search {
+    @include aligncenter();
+    gap: 1rem;
+
+
+
+
+    picture {
+        width: 20px;
+
+    }
+
+    &__group {
+        input {
+            width: 180px;
+            border: none;
+            outline: none;
+            font: inherit;
+            background-color: colors.$pale-blue;
+            font-size: .9rem
+        }
+
+        @include aligncenter();
+        height: 30px;
+        background-color: colors.$pale-blue;
+        padding: 1.2rem;
+        gap: 1rem;
+        border-radius: 10px;
+
+    }
+
+}
+
+@include tablet {
+    header {
+        padding: 2rem 2rem 0 2rem;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+}

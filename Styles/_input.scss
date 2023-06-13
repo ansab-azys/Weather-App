@@ -1,0 +1,67 @@
+@use 'colors';
+
+@mixin aligncenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.input__container {
+    width: 100%;
+    height: 100vh;
+    @include aligncenter();
+    flex-direction: column;
+    gap: 4rem;
+    display: none;
+}
+
+.input__container.visible {
+    display: flex
+}
+
+.form {
+    @include aligncenter();
+    flex-direction: column;
+    gap: 1rem;
+
+    button {
+        width: 250px;
+        border: none;
+        outline: none;
+        background-color: rgb(51, 56, 183);
+        padding: .5rem 1rem;
+        border-radius: 10px;
+        font: inherit;
+        color: white;
+    }
+}
+
+.input__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: .3rem;
+
+
+    input {
+        width: 250px;
+        border: none;
+        outline: none;
+        font: inherit;
+        background-color: colors.$pale-blue;
+        font-size: .9rem;
+        padding: .5rem 1rem;
+        border-radius: 10px;
+
+    }
+
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px colors.$pale-blue inset !important;
+    }
+
+}
